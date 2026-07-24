@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Atelier Véra — Interior Architecture & Design
 
-## Getting Started
+A production-quality, highly animated marketing site for a fictional premium
+interior-design studio in India. Built as a portfolio / client-acquisition demo:
+editorial, quiet, architectural — designed to look like an international studio,
+and to stay beautiful even with every animation disabled.
 
-First, run the development server:
+> **Brand:** Atelier Véra · _"Spaces, shaped around you."_
+
+## Tech stack
+
+| Concern       | Choice                                          |
+| ------------- | ----------------------------------------------- |
+| Framework     | Next.js 16 (App Router) + React 19 + TypeScript |
+| Styling       | Tailwind CSS v4 (CSS-first `@theme` tokens)     |
+| Animation     | Motion (Framer Motion) + GSAP + ScrollTrigger   |
+| Smooth scroll | Lenis (wired into the GSAP ticker)              |
+| Components    | React Bits (adapted), Swiper, Lucide icons      |
+| Fonts         | Fraunces (serif display) + Archivo (grotesque)  |
+| Images        | Unsplash via optimised `next/image`             |
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm run start    # serve the production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/
+│   ├── layout.tsx           # fonts, smooth scroll, cursor, preloader, transitions
+│   ├── (site)/              # public pages with nav + footer chrome
+│   │   ├── page.tsx         # homepage (composes every section)
+│   │   ├── projects/[slug]/ # case-study detail pages
+│   │   └── journal/[slug]/  # editorial article pages
+│   └── (auth)/              # signin + signup (no chrome)
+├── components/
+│   ├── layout/              # Navbar, MobileMenu, Footer, Preloader, SmoothScroll…
+│   ├── sections/            # one file per homepage section
+│   ├── animations/          # Reveal, Parallax, RevealImage (reusable wrappers)
+│   ├── reactbits/           # React Bits components (CountUp, SplitText, ScrollReveal…)
+│   ├── ui/                  # Button, SectionLabel, ComparisonSlider
+│   └── auth/                # AuthExperience (shared signin/signup)
+├── data/                    # projects, services, materials, process, journal, site…
+└── lib/                     # cn(), unsplash() URL helper, scroll helper
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All content lives in plain typed files under `data/` — no CMS, no state library.
 
-## Learn More
+## Notable techniques
 
-To learn more about Next.js, take a look at the following resources:
+- **Lenis + ScrollTrigger** are synced through `gsap.ticker` so scroll-driven
+  animations never drift (`components/layout/SmoothScroll.tsx`).
+- **Branded page transitions** — a persistent overlay wipes with the wordmark,
+  the router swaps underneath, then the panel lifts (`PageTransition.tsx`).
+- **Cinematic auth transition** — sign in ↔ sign up share one persistent
+  component; the image panel slides across while forms crossfade, and the URL is
+  swapped with `history.replaceState` so nothing remounts (`AuthExperience.tsx`).
+- **Before/After slider** works with mouse, touch and keyboard via pointer events
+  and `clip-path` (`ui/ComparisonSlider.tsx`).
+- **Accessibility** — respects `prefers-reduced-motion`, semantic HTML, alt text,
+  keyboard-operable controls, and a custom cursor only on fine-pointer devices.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_All photography is from Unsplash. Atelier Véra is a fictional studio._
