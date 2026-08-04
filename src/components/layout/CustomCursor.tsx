@@ -74,14 +74,14 @@ export function CustomCursor() {
   if (!enabled) return null;
 
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 z-[9999]">
+    <div aria-hidden className="pointer-events-none fixed inset-0 z-9999">
       <div
         ref={dotRef}
-        className="fixed left-0 top-0 -ml-[3px] -mt-[3px] h-1.5 w-1.5 rounded-full bg-ink mix-blend-difference"
+        className="fixed left-0 top-0 -ml-0.75 -mt-0.75 h-1.5 w-1.5 rounded-full bg-ink mix-blend-difference"
       />
       <div
         ref={ringRef}
-        className="fixed left-0 top-0 flex items-center justify-center rounded-full transition-[width,height,background-color] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
+        className="fixed left-0 top-0 flex items-center justify-center rounded-full transition-[width,height,background-color] duration-300 ease-out-expo"
         style={{
           width: label ? 84 : hovering ? 48 : 34,
           height: label ? 84 : hovering ? 48 : 34,
