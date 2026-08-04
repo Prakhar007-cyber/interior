@@ -32,7 +32,7 @@ export default async function ArticlePage({
   return (
     <article className="bg-bone">
       {/* Header */}
-      <header className="mx-auto max-w-[900px] px-5 pb-12 pt-32 text-center md:pt-44">
+      <header className="mx-auto max-w-225 px-5 pb-12 pt-32 text-center md:pt-44">
         <div className="flex items-center justify-center gap-3 text-stone">
           <span className="label">{article.category}</span>
           <span className="h-1 w-1 rounded-full bg-stone/50" />
@@ -47,18 +47,18 @@ export default async function ArticlePage({
       </header>
 
       {/* Lead image */}
-      <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+      <div className="mx-auto max-w-350 px-5 md:px-10">
         <RevealImage
           id={article.image}
           alt={article.title}
-          className="aspect-[16/9]"
+          className="aspect-video"
           sizes="90vw"
           priority
         />
       </div>
 
       {/* Body */}
-      <div className="mx-auto max-w-[720px] px-5 py-16 md:py-24">
+      <div className="mx-auto max-w-180 px-5 py-16 md:py-24">
         <div className="space-y-8">
           {article.body.map((block, i) => {
             if (block.type === "quote") {
