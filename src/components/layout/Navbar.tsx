@@ -46,10 +46,10 @@ export function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         className={cn(
-          "fixed inset-x-0 top-0 z-[900] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          "fixed inset-x-0 top-0 z-900 transition-all duration-500 ease-out-expo",
           scrolled || !overHero
             ? "bg-bone/80 py-3 shadow-[0_1px_0_0_rgba(26,24,21,0.08)] backdrop-blur-md"
-            : "bg-gradient-to-b from-ink/40 to-transparent py-6",
+            : "bg-linear-to-b from-ink/40 to-transparent py-6",
         )}
       >
         <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-5 md:px-10">
@@ -80,7 +80,7 @@ export function Navbar() {
                   {link.label}
                   <span
                     className={cn(
-                      "absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100",
+                      "absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 transition-transform duration-500 ease-out-expo group-hover:scale-x-100",
                       light ? "bg-bone" : "bg-ink",
                     )}
                   />

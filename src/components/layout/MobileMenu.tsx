@@ -65,7 +65,7 @@ export function MobileMenu({
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-[1000] flex flex-col bg-ink text-bone lg:hidden"
+          className="fixed inset-0 z-1000 flex flex-col bg-ink text-bone lg:hidden"
           variants={menuVariants}
           initial="closed"
           animate="open"
