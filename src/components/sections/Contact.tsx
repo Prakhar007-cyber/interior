@@ -116,7 +116,7 @@ export function Contact() {
         </div>
 
         {/* Right: form / success */}
-        <div className="relative min-h-[26rem] rounded-sm border border-bone/12 bg-charcoal/40 p-6 md:p-10">
+        <div className="relative min-h-104 rounded-sm border border-bone/12 bg-charcoal/40 p-6 md:p-10">
           <AnimatePresence mode="wait">
             {submitted ? (
               <motion.div
@@ -124,7 +124,7 @@ export function Contact() {
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="flex h-full min-h-[24rem] flex-col items-start justify-center"
+                className="flex h-full min-h-96 flex-col items-start justify-center"
               >
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-clay text-bone">
                   <Check className="h-6 w-6" />
