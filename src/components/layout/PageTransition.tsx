@@ -49,7 +49,7 @@ export function TransitionProvider({
         {stage !== 0 && (
           <motion.div
             key="transition-panel"
-            className="fixed inset-0 z-[9998] flex items-center justify-center bg-ink"
+            className="fixed inset-0 z-9998 flex items-center justify-center bg-ink"
             initial={{ y: "100%" }}
             animate={{ y: stage === 1 ? "0%" : "-100%" }}
             transition={{ duration: 0.55, ease: [0.76, 0, 0.24, 1] }}
