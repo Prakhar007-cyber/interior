@@ -46,7 +46,7 @@ export function Preloader() {
     <AnimatePresence onExitComplete={release}>
       {active && (
         <motion.div
-          className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-ink text-bone"
+          className="fixed inset-0 z-10000 flex flex-col items-center justify-center bg-ink text-bone"
           initial={{ y: 0 }}
           exit={{ y: "-100%" }}
           transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}

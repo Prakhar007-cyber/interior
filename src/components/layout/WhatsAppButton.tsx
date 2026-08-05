@@ -35,11 +35,11 @@ export function WhatsAppButton() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.9 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="group fixed bottom-6 right-5 z-[800] flex items-center gap-2 rounded-full border border-bone/15 bg-ink/95 py-3 pl-3 pr-4 text-bone shadow-lg backdrop-blur-sm md:bottom-8 md:right-8"
+          className="group fixed bottom-6 right-5 z-800 flex items-center gap-2 rounded-full border border-bone/15 bg-ink/95 py-3 pl-3 pr-4 text-bone shadow-lg backdrop-blur-sm md:bottom-8 md:right-8"
           data-cursor-label="CHAT"
         >
           <MessageCircle className="h-5 w-5 text-clay-soft" />
-          <span className="max-w-0 overflow-hidden whitespace-nowrap text-sm opacity-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:max-w-[8rem] group-hover:opacity-100">
+          <span className="max-w-0 overflow-hidden whitespace-nowrap text-sm opacity-0 transition-all duration-500 ease-out-expo group-hover:max-w-32 group-hover:opacity-100">
             WhatsApp us
           </span>
         </motion.a>
