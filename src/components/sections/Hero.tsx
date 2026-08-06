@@ -39,7 +39,7 @@ export function Hero() {
     <section
       ref={ref}
       onMouseMove={onMouseMove}
-      className="relative h-[100svh] w-full overflow-hidden bg-ink"
+      className="relative h-svh w-full overflow-hidden bg-ink"
     >
       {/* Background image: scales down on load, parallax on scroll + mouse */}
       <motion.div style={{ y: imageY }} className="absolute inset-0">
@@ -62,7 +62,7 @@ export function Hero() {
       </motion.div>
 
       {/* Legibility overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-ink/50 via-ink/20 to-ink/70" />
+      <div className="absolute inset-0 bg-linear-to-b from-ink/50 via-ink/20 to-ink/70" />
 
       {/* Content */}
       <motion.div
