@@ -53,13 +53,13 @@ export function FeaturedProjects() {
                 >
                   {/* Image */}
                   <div className="md:col-span-8 md:[direction:ltr]">
-                    <div className="relative aspect-[4/5] overflow-hidden bg-paper sm:aspect-[16/10]">
+                    <div className="relative aspect-4/5 overflow-hidden bg-paper sm:aspect-16/10">
                       <Image
                         src={unsplash(project.cover, 1600)}
                         alt={`${project.title}, ${project.location} — ${project.category}`}
                         fill
                         sizes="(max-width: 768px) 100vw, 66vw"
-                        className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                        className="object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-ink/0 transition-colors duration-700 group-hover:bg-ink/10" />
                       <span className="pointer-events-none absolute left-5 top-5 font-serif text-6xl text-bone/90 mix-blend-difference md:text-7xl">
