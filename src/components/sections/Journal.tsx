@@ -32,13 +32,13 @@ export function Journal() {
           className="group mt-14 grid gap-8 md:grid-cols-2 md:items-center"
           data-cursor-label="READ"
         >
-          <div className="relative aspect-[16/11] overflow-hidden bg-paper">
+          <div className="relative aspect-16/11 overflow-hidden bg-paper">
             <Image
               src={unsplash(feature.image, 1400)}
               alt={feature.title}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+              className="object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-105"
             />
           </div>
           <div>
@@ -75,13 +75,13 @@ export function Journal() {
                 className="group block"
                 data-cursor-label="READ"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-paper">
+                <div className="relative aspect-16/10 overflow-hidden bg-paper">
                   <Image
                     src={unsplash(article.image, 1000)}
                     alt={article.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 45vw"
-                    className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                    className="object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-105"
                   />
                 </div>
                 <div className="mt-5 flex items-center gap-3 text-stone">
