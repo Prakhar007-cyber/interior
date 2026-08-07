@@ -28,7 +28,7 @@ export function Process() {
         <div className="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-20">
           {/* Sticky visual (desktop) */}
           <div className="hidden lg:block">
-            <div className="sticky top-24 aspect-[4/5] overflow-hidden bg-paper">
+            <div className="sticky top-24 aspect-4/5 overflow-hidden bg-paper">
               {processSteps.map((step, i) => (
                 <motion.div
                   key={step.number}
@@ -76,7 +76,7 @@ export function Process() {
                 </div>
 
                 {/* Inline image on mobile */}
-                <div className="relative mt-6 aspect-[16/10] w-full overflow-hidden bg-paper lg:hidden">
+                <div className="relative mt-6 aspect-16/10 w-full overflow-hidden bg-paper lg:hidden">
                   <Image
                     src={unsplash(step.image, 900)}
                     alt={step.title}
