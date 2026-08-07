@@ -46,23 +46,23 @@ export function Materials() {
           grabCursor
           slidesPerView="auto"
           spaceBetween={16}
-          className="!overflow-visible"
+          className="overflow-visible!"
         >
           {materials.map((material) => (
             <SwiperSlide
               key={material.name}
-              className="!w-[72vw] sm:!w-[42vw] md:!w-[28vw] lg:!w-[22vw]"
+              className="w-[72vw]! sm:w-[42vw]! md:w-[28vw]! lg:w-[22vw]!"
               data-cursor-label="DRAG"
             >
-              <div className="group relative aspect-[3/4] overflow-hidden bg-ink">
+              <div className="group relative aspect-3/4 overflow-hidden bg-ink">
                 <Image
                   src={unsplash(material.image, 900)}
                   alt={`${material.name} — ${material.note}`}
                   fill
                   sizes="(max-width: 768px) 72vw, 28vw"
-                  className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                  className="object-cover transition-transform duration-[1.2s] ease-out-expo group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-ink/80 via-transparent to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
                   <span className="font-serif text-2xl text-bone">
                     {material.name}
