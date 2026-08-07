@@ -25,7 +25,7 @@ export function ProjectHero({
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <div ref={ref} className="relative h-[100svh] overflow-hidden bg-ink">
+    <div ref={ref} className="relative h-svh overflow-hidden bg-ink">
       <motion.div style={{ y }} className="absolute inset-0">
         <motion.div
           initial={{ scale: 1.18 }}
@@ -43,7 +43,7 @@ export function ProjectHero({
           />
         </motion.div>
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-ink/40" />
+      <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-ink/10 to-ink/40" />
 
       <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-end px-5 pb-16 md:px-10 md:pb-20">
         <div className="flex items-center gap-3 text-bone/80">
