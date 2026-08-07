@@ -63,7 +63,7 @@ export function Philosophy() {
         <div className="relative z-10 mx-auto w-full max-w-[1600px] px-5 md:px-10">
           <span className="label text-stone-light">Our Philosophy</span>
 
-          <div className="mt-8 h-[9rem] md:h-[16rem]">
+          <div className="mt-8 h-36 md:h-64">
             {words.map((w, i) => (
               <motion.div
                 key={w.word}
