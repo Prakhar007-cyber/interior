@@ -71,7 +71,7 @@ export function Services() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.4 }}
-                          className="max-w-xl pl-[3.25rem] text-sm leading-relaxed text-stone"
+                          className="max-w-xl pl-13 text-sm leading-relaxed text-stone"
                         >
                           {service.description}
                         </motion.p>
@@ -91,7 +91,7 @@ export function Services() {
                         className="overflow-hidden lg:hidden"
                       >
                         <div className="pb-6">
-                          <div className="relative aspect-[16/10] w-full overflow-hidden bg-paper">
+                          <div className="relative aspect-16/10 w-full overflow-hidden bg-paper">
                             <Image
                               src={unsplash(service.image, 1000)}
                               alt={service.title}
@@ -114,7 +114,7 @@ export function Services() {
 
           {/* Sticky image panel (desktop) */}
           <div className="hidden lg:col-span-5 lg:block">
-            <div className="sticky top-28 aspect-[4/5] overflow-hidden bg-paper">
+            <div className="sticky top-28 aspect-4/5 overflow-hidden bg-paper">
               {services.map((service, i) => (
                 <motion.div
                   key={service.title}
