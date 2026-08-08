@@ -47,7 +47,7 @@ export function Studio() {
               <RevealImage
                 id="1583847268964-b28dc8f51f92"
                 alt="A detail of hand-finished plaster and brass in an Atelier Véra interior"
-                className="aspect-[4/3]"
+                className="aspect-4/3"
                 sizes="40vw"
               />
             </div>
@@ -55,7 +55,7 @@ export function Studio() {
 
           {/* Right column: large image + pillars */}
           <div className="lg:col-span-7">
-            <div className="relative aspect-[16/11] overflow-hidden bg-paper">
+            <div className="relative aspect-16/11 overflow-hidden bg-paper">
               <Image
                 src={unsplash("1519710164239-da123dc03ef4", 1600)}
                 alt="Inside the Atelier Véra studio"
