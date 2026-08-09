@@ -24,10 +24,10 @@ export function Testimonials() {
 
   return (
     <section className="bg-paper py-24 md:py-36">
-      <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+      <div className="mx-auto max-w-350 px-5 md:px-10">
         <SectionLabel>In Their Words</SectionLabel>
 
-        <div className="mt-12 min-h-[16rem] md:min-h-[20rem]">
+        <div className="mt-12 min-h-64 md:min-h-80">
           <AnimatePresence mode="wait">
             <motion.blockquote
               key={index}
