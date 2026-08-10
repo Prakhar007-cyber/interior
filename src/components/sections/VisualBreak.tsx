@@ -21,7 +21,7 @@ export function VisualBreak() {
   const overlay = useTransform(scrollYProgress, [0, 0.5, 1], [0.7, 0.45, 0.7]);
 
   return (
-    <section ref={ref} className="relative flex h-[100svh] items-center justify-center overflow-hidden bg-ink">
+    <section ref={ref} className="relative flex h-svh items-center justify-center overflow-hidden bg-ink">
       <motion.div style={{ scale }} className="absolute inset-0">
         <Image
           src={unsplash("1615873968403-89e068629265", 2400)}
