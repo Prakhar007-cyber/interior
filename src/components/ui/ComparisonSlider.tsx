@@ -55,7 +55,7 @@ export function ComparisonSlider({
   return (
     <div
       ref={containerRef}
-      className="relative aspect-[4/3] w-full touch-none select-none overflow-hidden bg-paper md:aspect-[16/10]"
+      className="relative aspect-4/3 w-full touch-none select-none overflow-hidden bg-paper md:aspect-16/10"
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
